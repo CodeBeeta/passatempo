@@ -19,3 +19,5 @@ O Desenvolvimento do aplicativo será com a tecnologia **Flutter** e contará co
 * [GitHub de matheusfcosta para apoio](https://github.com/matheusfcosta/JOGO_DA_VELHA)
 * [Jogo da Memória com JavaScript puro](http://viniciusmo.github.io/blog/2013/04/09/joguinho-da-memoria-html-plus-css-plus-javascript/)
 * [Lendo QRCODE com Flutter](https://www.youtube.com/watch?v=j_PEfrubUdc)
+* [Artigo MEDIUM SplashScreen](https://medium.com/flutter-comunidade-br/splash-screen-com-anima%C3%A7%C3%A3o-no-flutter-f7bd6e84cf5a)
+* [Tutorial SplashScreen Flutter](https://www.youtube.com/watch?v=BjV4RMkVY6w)
