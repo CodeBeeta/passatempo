@@ -16,5 +16,5 @@ O Desenvolvimento do aplicativo será com a tecnologia **Flutter** e contará co
 #Links de Apoio para realizar o projeto
 
 * [Jogo da velha com javaScript puro](https://www.codigofonte.com.br/videos/programamos-um-game-com-javascript-puro-em-28-minutos-mao-no-codigo-10)
-* [GitHub de matheusfcosta para apoio](https://github.com/matheusfcosta/JOGO_DA_VELHA
+* [GitHub de matheusfcosta para apoio](https://github.com/matheusfcosta/JOGO_DA_VELHA)
 * [Jogo da Memória com JavaScript puro](http://viniciusmo.github.io/blog/2013/04/09/joguinho-da-memoria-html-plus-css-plus-javascript/)
