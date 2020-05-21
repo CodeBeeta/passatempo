@@ -6,7 +6,7 @@ class Selecao extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Selecione um dos minigames!"),
+        title: Text("Selecione um dos minigames!", style: TextStyle(color: Colors.white, fontSize: 20.0)),
       ),
       body: Center(
         child: Column (

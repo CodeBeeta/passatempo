@@ -36,11 +36,11 @@ class _PageState extends State<tictactoe> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Jogo da Velha!", style: TextStyle(color: Colors.black, fontSize: 20.0)),
+        title: Text("Jogo da Velha!", style: TextStyle(color: Colors.white, fontSize: 20.0)),
         backgroundColor: Colors.lightBlue,
         centerTitle: true,
         actions: <Widget>[
-          IconButton(icon: Icon(Icons.rotate_left), onPressed: _limpaTudo, color: Colors.black),
+          IconButton(icon: Icon(Icons.rotate_left), onPressed: _limpaTudo, color: Colors.white),
         ],
       ),
       body: Center(
@@ -74,7 +74,7 @@ class _PageState extends State<tictactoe> {
   Container get buildHorizontalLine{
     return new Container(
       margin: EdgeInsets.only(left: 16.0, right: 16.0),
-      color: Colors.black,
+      color: Colors.lightBlue,
       height: 5.0,
     );
   }
@@ -82,7 +82,7 @@ class _PageState extends State<tictactoe> {
   Container get buildVerticalLine{
     return new Container(
       margin: EdgeInsets.only(top: 16.0, bottom: 16.0),
-      color: Colors.black,
+      color: Colors.lightBlue,
       width: 5.0,
     );
   }
