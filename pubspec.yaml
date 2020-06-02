@@ -28,6 +28,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
+  flip_card: ^0.4.4
 
 dev_dependencies:
   flutter_test:
@@ -38,6 +39,18 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  assets:
+    - images/home/chocolate_derretido.png
+    - images/home/logo_passatempo.png
+    - images/home/gear.png
+    - images/home/cookie.png
+    - images/menu/blackjack.png
+    - images/menu/memory.png
+    - images/menu/monkey_memory.png
+    - images/menu/tic-tac-toe.png
+    - images/menu/macaco1.png
+    - images/menu/marketing.png
+    - images/memoryGame/monkey_memory.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

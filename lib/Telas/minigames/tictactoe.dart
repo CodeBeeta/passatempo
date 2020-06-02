@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-
-class tictactoe extends StatefulWidget {
+class TictactoeGame extends StatefulWidget {
   @override
   _PageState createState() => _PageState();
 }
 
-class _PageState extends State<tictactoe> {
+class _PageState extends State<TictactoeGame> {
 
   List<List> _matrix;
   String _lastChar = 'O';
