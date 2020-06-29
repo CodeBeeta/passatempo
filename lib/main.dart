@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:random_string/random_string.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:math' show Random;
 
 void main() {
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
 }
 class HomePage extends StatefulWidget {
   //to do variables
+  int moedasJogo;
   String _ganhador;
   String playerImage;
   String monkeyImage;
@@ -39,13 +41,49 @@ class HomePage extends StatefulWidget {
     opcoes.add('Papel');
     opcoes.add('Tesoura');
   }
+
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
   //to do functions
+  //função que cria o alert
+  alertMoedas(BuildContext context){
+
+    TextEditingController customController = TextEditingController();
+
+    return showDialog(context: context, builder: (context){
+      return AlertDialog(
+        title: Text("+10 Moedas para o tesouro \n Total:" + widget.moedasJogo.toString(), textAlign: TextAlign.center,),
+
+
+      );
+    });
+  }
+
+  Future load() async {
+    var pontos = await SharedPreferences.getInstance();
+    var data = pontos.getInt('moeda');
+
+    if (data != null){
+      widget.moedasJogo = data;
+    }else{
+      widget.moedasJogo = 0;
+    }
+  }
+
+  save() async {
+    var pontos = await SharedPreferences.getInstance();
+    var soma = widget.moedasJogo + 10;
+    widget.moedasJogo = soma;
+    print(widget.moedasJogo);
+    await pontos.setInt('moeda', soma);
+  }
+
   void escolher(String value){
+    load();
+
     if(value=='Pedra'){
       setState(() {
         widget.playerImage="images/pedra.png";
@@ -80,6 +118,8 @@ class _HomePageState extends State<HomePage> {
     }else{
       setState(() {
         widget._ganhador = "VOCÊ GANHOU!!";
+        save();
+        alertMoedas(context);
       });
     }
 
