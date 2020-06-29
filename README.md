@@ -1,22 +1,16 @@
-# Mini games Passatempo
-Campanha publicitária para a Passatempo desenvolvida na aula de Dispositivos Móveis da Fatec Praia Grande pelo grupo: 
+# jogoapp
 
-* [Daiane Gomes](https://www.linkedin.com/in/daianne-aguiar-00b772132/)
-* [Matheus Marques](https://www.linkedin.com/in/matheus-mqar/)
-* [Matheus Salgado](https://www.linkedin.com/in/matheus-moys%C3%A9s-salgado-5bb90b15a/)
-* [Roberta Novaes](https://br.linkedin.com/in/dev-roberta-novaes)
+A new Flutter application.
 
-O Desenvolvimento do aplicativo será com a tecnologia **Flutter** e contará com telas de contexto e 4 minigames disponíveis para o público. 
+## Getting Started
 
-----------------------------------------
+This project is a starting point for a Flutter application.
 
-![brincar com passatempo](https://maematraca.files.wordpress.com/2017/04/captura-de-tela-2017-04-28-acc80s-15-24-04.png?w=511)
+A few resources to get you started if this is your first Flutter project:
 
-# Links de Apoio para realizar o projeto
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-* [Jogo da velha com javaScript puro](https://www.codigofonte.com.br/videos/programamos-um-game-com-javascript-puro-em-28-minutos-mao-no-codigo-10)
-* [GitHub de matheusfcosta para apoio](https://github.com/matheusfcosta/JOGO_DA_VELHA)
-* [Jogo da Memória com JavaScript puro](http://viniciusmo.github.io/blog/2013/04/09/joguinho-da-memoria-html-plus-css-plus-javascript/)
-* [Lendo QRCODE com Flutter](https://www.youtube.com/watch?v=j_PEfrubUdc)
-* [Artigo MEDIUM SplashScreen](https://medium.com/flutter-comunidade-br/splash-screen-com-anima%C3%A7%C3%A3o-no-flutter-f7bd6e84cf5a)
-* [Tutorial SplashScreen Flutter](https://www.youtube.com/watch?v=BjV4RMkVY6w)
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
