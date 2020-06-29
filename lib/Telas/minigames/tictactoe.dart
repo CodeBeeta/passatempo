@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:passatempoapp/Telas/home/home.dart';
+import 'package:passatempoapp/Telas/menu/menu_page.dart';
 
 class TictactoeGame extends StatefulWidget {
   @override
@@ -32,11 +34,21 @@ class _PageState extends State<TictactoeGame> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
+    return new WillPopScope(
+        onWillPop: () async => false,
+    child: new Scaffold(
+      backgroundColor: Color.fromRGBO(1, 169, 206, 1),
       appBar: AppBar(
         title: Text("Jogo da Velha!", style: TextStyle(color: Colors.white, fontSize: 20.0)),
-        backgroundColor: Colors.lightBlue,
+        leading: new IconButton(
+        icon: new Icon(Icons.arrow_back_ios),
+        onPressed: () => Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+              builder: (context) => Menu(
+              )
+          ),
+        )),
+        backgroundColor: Colors.red,
         centerTitle: true,
         actions: <Widget>[
           IconButton(icon: Icon(Icons.rotate_left), onPressed: _limpaTudo, color: Colors.white),
@@ -46,6 +58,7 @@ class _PageState extends State<TictactoeGame> {
           child: Stack(
             children: [_buildGrid(), _buildField()],
           )),
+    ),
     );
   }
 
@@ -73,7 +86,7 @@ class _PageState extends State<TictactoeGame> {
   Container get buildHorizontalLine{
     return new Container(
       margin: EdgeInsets.only(left: 16.0, right: 16.0),
-      color: Colors.lightBlue,
+      color: Colors.white,
       height: 5.0,
     );
   }
@@ -81,7 +94,7 @@ class _PageState extends State<TictactoeGame> {
   Container get buildVerticalLine{
     return new Container(
       margin: EdgeInsets.only(top: 16.0, bottom: 16.0),
-      color: Colors.lightBlue,
+      color: Colors.white,
       width: 5.0,
     );
   }
@@ -152,7 +165,7 @@ class _PageState extends State<TictactoeGame> {
         return Container(
           padding: EdgeInsets.all(2.0),
           child: Center(
-              child: Text(cell, style: TextStyle(fontSize: 90.0, color: Colors.blueAccent))),
+              child: Text(cell, style: TextStyle(fontSize: 90.0, color: Colors.redAccent))),
         );
       } else {
         return Container(
@@ -183,9 +196,40 @@ class _PageState extends State<TictactoeGame> {
         rdiag++;
     }
     if (row == n+1 || col == n+1 || diag == n+1 || rdiag == n+1){
+
       print('$player Venceu');
+      showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (context) => AlertDialog(
+          title: Text('Parabéns!\nO jogador com "$player" venceu!'),
+          actions: <Widget>[
+            FlatButton(
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (context) => TictactoeGame(
+                    ),
+                  ),
+                );
+              },
+              child: Text("RECOMEÇAR"),
+            ),
+            FlatButton(
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                      builder: (context) => Menu(
+                      )
+                  ),
+                );
+              },
+              child: Text("VOLTAR"),
+            ),
+          ],
+        ),
+      );
     }
   }
-
-
 }
+
