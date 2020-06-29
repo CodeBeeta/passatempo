@@ -18,7 +18,7 @@ class Selecao extends StatelessWidget {
             child: Text('Jogo 1!')),
             RaisedButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => tictactoe()));},
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => TictactoeGame()));},
                 child: Text('Jogo da Velha!')),
             RaisedButton(
                 onPressed: () {
