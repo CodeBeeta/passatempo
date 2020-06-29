@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:passatempoapp/Telas/home/home.dart';
 import 'package:passatempoapp/Telas/minigames/memory_game.dart';
 import 'package:passatempoapp/Telas/minigames/tictactoe.dart';
 
@@ -31,7 +32,12 @@ class _MenuState extends State<Menu> {
                             IconButton(
                               icon: Icon(Icons.arrow_back_ios),
                               onPressed: () {
-                                Navigator.pop(context);
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                      builder: (context) => Home(
+                                      )
+                                  ),
+                                );
                               },
                             ),
                           ],
