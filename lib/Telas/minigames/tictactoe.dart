@@ -35,30 +35,30 @@ class _PageState extends State<TictactoeGame> {
   @override
   Widget build(BuildContext context) {
     return new WillPopScope(
-        onWillPop: () async => false,
-    child: new Scaffold(
-      backgroundColor: Color.fromRGBO(1, 169, 206, 1),
-      appBar: AppBar(
-        title: Text("Jogo da Velha!", style: TextStyle(color: Colors.white, fontSize: 20.0)),
-        leading: new IconButton(
-        icon: new Icon(Icons.arrow_back_ios),
-        onPressed: () => Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-              builder: (context) => Menu(
-              )
-          ),
-        )),
-        backgroundColor: Colors.red,
-        centerTitle: true,
-        actions: <Widget>[
-          IconButton(icon: Icon(Icons.rotate_left), onPressed: _limpaTudo, color: Colors.white),
-        ],
+      onWillPop: () async => false,
+      child: new Scaffold(
+        backgroundColor: Color.fromRGBO(1, 169, 206, 1),
+        appBar: AppBar(
+          title: Text("Jogo da Velha!", style: TextStyle(color: Colors.white, fontSize: 20.0)),
+          leading: new IconButton(
+              icon: new Icon(Icons.arrow_back_ios),
+              onPressed: () => Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                    builder: (context) => Menu(
+                    )
+                ),
+              )),
+          backgroundColor: Colors.red,
+          centerTitle: true,
+          actions: <Widget>[
+            IconButton(icon: Icon(Icons.rotate_left), onPressed: _limpaTudo, color: Colors.white),
+          ],
+        ),
+        body: Center(
+            child: Stack(
+              children: [_buildGrid(), _buildField()],
+            )),
       ),
-      body: Center(
-          child: Stack(
-            children: [_buildGrid(), _buildField()],
-          )),
-    ),
     );
   }
 
@@ -232,4 +232,3 @@ class _PageState extends State<TictactoeGame> {
     }
   }
 }
-

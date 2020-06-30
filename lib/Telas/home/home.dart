@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:passatempoapp/Telas/menu/menu_config.dart';
 import 'package:passatempoapp/Telas/menu/menu_page.dart';
 
 class Home extends StatefulWidget {
@@ -47,7 +48,10 @@ class _HomeState extends State<Home> {
                   ),
                   Spacer(flex: 2),
                   FlatButton(
-                    onPressed: () => {},
+                    onPressed: () => {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Config())),
+                    },
                     padding: EdgeInsets.all(10.0),
                     child: Column(
                       // Replace with a Row for horizontal icon + text

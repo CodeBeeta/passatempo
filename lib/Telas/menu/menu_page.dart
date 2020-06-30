@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:passatempoapp/Telas/home/home.dart';
+import 'package:passatempoapp/Telas/minigames/jankenpo.dart';
 import 'package:passatempoapp/Telas/minigames/memory_game.dart';
 import 'package:passatempoapp/Telas/minigames/tictactoe.dart';
 
@@ -67,7 +68,10 @@ class _MenuState extends State<Menu> {
             children: <Widget>[
               Expanded(
                 child: FlatButton(
-                  onPressed: () => {},
+                  onPressed: () => {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HomePage())),
+                  },
                   padding: EdgeInsets.all(10.0),
                   child: Column(
                     // Replace with a Row for horizontal icon + text
@@ -76,7 +80,7 @@ class _MenuState extends State<Menu> {
                         "images/menu/blackjack.png",
                         height: 100.0,
                       ),
-                      Text("Jogo da Adivinhação",
+                      Text("Pedra, Papel, Tesoura",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 18.0,
@@ -127,26 +131,6 @@ class _MenuState extends State<Menu> {
                         height: 100.0,
                       ),
                       Text("Jogo da Velha",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18.0,
-                          ))
-                    ],
-                  ),
-                ),
-              ),
-              Expanded(
-                child: FlatButton(
-                  onPressed: () => {},
-                  padding: EdgeInsets.all(10.0),
-                  child: Column(
-                    // Replace with a Row for horizontal icon + text
-                    children: <Widget>[
-                      Image.asset(
-                        "images/menu/monkey_memory.png",
-                        height: 100.0,
-                      ),
-                      Text("Cara ou Coroa",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 18.0,

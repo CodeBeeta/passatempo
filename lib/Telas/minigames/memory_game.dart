@@ -61,7 +61,7 @@ class _MemoryGameState extends State<MemoryGame> {
             color: Colors.white,
           ),
         ),
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.red,
       ),
       backgroundColor: Color.fromRGBO(1, 169, 206, 1),
       body: SafeArea(
