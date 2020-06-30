@@ -20,15 +20,15 @@ class _ConfigState extends State<Config> {
               RaisedButton(
                   onPressed: () {
                     null;},
-                  child: Text('Jogo 1!')),
+                  child: Text('Tutoriais')),
               RaisedButton(
                   onPressed: () {
                     null;},
-                  child: Text('Jogo da Velha!')),
+                  child: Text('Nestlé')),
               RaisedButton(
                   onPressed: () {
                     null;},
-                  child: Text('Jogo 3!')),
+                  child: Text('Sobre')),
               RaisedButton(
                   onPressed: () {
                     exit(0);},
