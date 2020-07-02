@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:random_string/random_string.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:math' show Random;
+import 'package:passatempoapp/Telas/menu/menu_config.dart';
 
 void main() {
   runApp(MyApp());
@@ -228,7 +229,12 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Color.fromRGBO(0, 169, 205, 1),
       appBar: AppBar(
         title: Text('Pedra, Papel e Tesoura!'),
-        backgroundColor: Colors.red
+        backgroundColor: Colors.red,
+          actions: <Widget>[
+            IconButton(icon: Icon(Icons.settings), onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Config())); }, color: Colors.white),
+    ]
       ),
       body: new Padding(
         padding: new EdgeInsets.symmetric(vertical: 0.0, horizontal: 0.0),

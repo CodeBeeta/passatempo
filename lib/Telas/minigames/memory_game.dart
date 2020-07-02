@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:passatempoapp/Telas/menu/menu_config.dart';
 import 'package:flip_card/flip_card.dart';
 
 int level = 6;
@@ -62,6 +62,11 @@ class _MemoryGameState extends State<MemoryGame> {
           ),
         ),
         backgroundColor: Colors.red,
+          actions: <Widget>[
+      IconButton(icon: Icon(Icons.settings), onPressed: () {
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => Config())); }, color: Colors.white),
+    ]
       ),
       backgroundColor: Color.fromRGBO(1, 169, 206, 1),
       body: SafeArea(

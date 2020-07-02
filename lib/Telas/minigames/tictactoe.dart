@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:passatempoapp/Telas/home/home.dart';
 import 'package:passatempoapp/Telas/menu/menu_page.dart';
+import 'package:passatempoapp/Telas/menu/menu_config.dart';
+
 
 class TictactoeGame extends StatefulWidget {
   @override
@@ -52,6 +54,9 @@ class _PageState extends State<TictactoeGame> {
           centerTitle: true,
           actions: <Widget>[
             IconButton(icon: Icon(Icons.rotate_left), onPressed: _limpaTudo, color: Colors.white),
+            IconButton(icon: Icon(Icons.settings), onPressed: () {
+              Navigator.push(context,
+                MaterialPageRoute(builder: (context) => Config())); }, color: Colors.white),
           ],
         ),
         body: Center(
